@@ -1,8 +1,77 @@
+@font-face {
+  font-family: headerFont;
+  src: url(fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: bodyFont;
+  src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: bodyFontItalics;
+  src: url(fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+* {
+  background-color: #f7f5f0;
+  color: #0a0a0a;
+}
 a {
   text-decoration: none;
-  color: black;
-  padding: 5px;
+  color: #0a0a0a;
+  padding-left: 10px;
+  font-family: bodyFont, Arial, Helvetica, sans-serif;
 }
 nav {
   justify-self: center;
+}
+
+h1 {
+  color: #d4af37;
+}
+h1,
+h2 {
+  font-family: headerFont, Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+h2 {
+  justify-self: center;
+  display: inline;
+  text-align: center;
+  font-size: 3em;
+  font-display: block;
+}
+
+h3 {
+  font: 1em bodyFont;
+  font-weight: light;
+}
+
+p {
+  font-family: bodyFontItalics;
+  color: #626060;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.body-image {
+  height: 400px;
+  width: auto;
+  display: inline;
+  padding-top: 50px;
+}
+
+.video {
+  width: 250px;
 }
