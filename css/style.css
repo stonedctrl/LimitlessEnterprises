@@ -16,6 +16,10 @@
 * {
   background-color: #f7f5f0;
   color: #0a0a0a;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -47,9 +51,10 @@ h2 {
 h3 {
   font: 1em bodyFont;
   font-weight: light;
+  text-align: center;
 }
 
-p {
+p, ul {
   font-family: bodyFontItalics;
   color: #626060;
 }
@@ -57,14 +62,17 @@ p {
 .logo {
   width: 30px;
   height: 30px;
-  position: absolute;
+  position: relative;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+.hero-image,
 .body-image {
   height: 400px;
   width: auto;
@@ -74,4 +82,78 @@ p {
 
 .video {
   width: 250px;
+}
+
+main {
+  margin: 2rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.gallery {
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  text-align: center;
+  margin: 1em;
+  
+}
+
+input {
+  border-radius: 20px;
+  border-style: none;
+  background-color: hwb(45 93% 10%);
+  margin: 1em 0;
+}
+
+form, button{
+  font-family: bodyFont, Arial, Helvetica, sans-serif;
+  
+}
+button {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  border: none;
+  background-color: #d4af37;
+  padding: 0.5em 0.8em;
+  border-radius: 0.8em;
+}
+
+a > strong {
+  text-decoration: underline;
+}
+
+/*--- responsiveness ---*/
+/* Mobile Version */
+@media only screen and (max-width: 600px) {
+  .main-nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+  }
+  .hero-image {
+    width: 300px;
+  }
+  .hero-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
 }
